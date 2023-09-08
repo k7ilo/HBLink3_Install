@@ -1,4 +1,3 @@
-<!-- GETTING STARTED -->
 ## Getting Started
 
 This is an attempt to present an alternative to the DOCKER setup installation method of HBLink3 with the PARROT (EchoTest) service
@@ -83,6 +82,27 @@ be enabled and all neccessary network ports will be opened. All others will be c
 ```
 ./ufw-firewall_install.sh
 ```
+
+## FDMR-Monitor Installation
+
+fdmr-mon_install.sh is used to install the FDMR-Monitor Dashboard by OA4DOA.  It will first build you a webserver
+with php support and then install the dashboard. In order to do so, follow the steps below:
+
+Change into the HBLink3_Install directory if not already:
+```
+cd /opt/HBLink3_Install
+```
+Make the fdmr-mon_install.sh file executable:
+```
+chmod +x fdmr-mon_install.sh
+```
+Now run the fdmr-mon_install.sh script.  When installation is completed,
+you will be presented with instructions on how to test FDMR-Monitor:
+```
+./fdmr-mon_install.sh
+```
+
+
  
 
 
