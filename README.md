@@ -1,16 +1,61 @@
-# HBLink3_Install
-  - hblink3_install.sh =>>       Installs HBLink3 with one test talkgroup and parrot echotest service
-  - ufw-firewall_install.sh =>>  Installs the ufw firewall solution and opens basic required network ports    
-  - fdmr-mon_install.sh =>>      Installs the FDMR-Monitor dashboard for HBLink3
+<!-- GETTING STARTED -->
+## Getting Started
 
-To start the installation process, as ROOT ....
-1. Make sure your Debian 10/11 system is fully updated:     apt update && apt full-upgrade -y
-2. Reboot to make sure any updates are loaded.
-3. Install git:     apt install -y git
-4. Change to the /opt directory and download these scripts:     cd /opt
-5. Download these scripts:     git clone https://github.com/k7ilo/HBLink3_Install.git
+This is an attempt to present an alternative to the DOCKER setup installation method of HBLink3 with the PARROT (EchoTest) service
+along with a monitoring dashboard using FDMR-Monitor.  FDMR-Monitor seems to be supported more than the actual HBMonv2 distribution
+it derives from. To get your DMR Network up and running, follow the following steps below.
 
 
+## Prerequisites
+
+First, this has been tested on Debian 10 and 11, 64 bit distributions only and it is assumed that you are doing the same along with using
+the ufw firewall solution. If this works on other versions of Debian, and you have an iptables firewall setup, please let me know at k7ilo@outlook.com
+
+* Temporarily disable your firewall for testing only (ufw in this case):
+  ```sh
+  ufw disable
+  ```
+* Confirm your Debian distribution is updated:
+  ```sh
+  apt update && apt full-upgrade -y
+  ```
+* Reboot:
+  ```sh
+  reboot
+  ```
+* Install git:
+  ```sh
+  apt install -y git
+  ```
+
+
+## HBLink3 Installation
+
+Change to the /opt directory:
+```
+cd /opt
+```
+Download the repository hosting the scripts:
+```
+git clone https://github.com/k7ilo/HBLink3_Install.git
+```
+Change into the HBLink3_Install directory:
+```
+cd /opt/HBLink3_Install
+```
+Make the hblink3_install.sh file executable::
+```
+chmod +x hblink3_install.sh
+```
+Now run the hblink3_install.sh script.  When installation is completed,
+you will be presented with instructions on testing HBlink3.  I suggest
+doing so before moving on:
+```
+./hblink3_install.sh
+```
+
+## Firewall Installation/Configuration (Optional but highly recommended)
+ 
 
 
 
