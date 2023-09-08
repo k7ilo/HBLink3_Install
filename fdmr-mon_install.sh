@@ -143,7 +143,11 @@ echo " Done .... "
 sleep 2
 
 clear
-echo " And it looks like we're done with installing FDMR-Monitor  "
-echo " Check and see if it's running by typing: systemctl status fdmr_mon  "
-echo " Access the Dashboard by going to the Dashboards URL at http://<server_address> "
-echo " 73 "
+echo " So now it looks like we're done with installing FDMR-Monitor "
+echo " Check and see if it's running by typing: systemctl status fdmr_mon "
+echo " Access the Dashboard with your favorite browserby going to the "
+echo " Dashboards URL at http://<server_address> "
+echo ""
+echo " Click on Linked Systems.  If everything went well, you should see the PARROT server "
+echo " under the Peers status section "
+echo " Have fun and 73 "
