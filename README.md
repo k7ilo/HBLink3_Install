@@ -8,7 +8,7 @@ To start the installation process, as ROOT ....
 2. Reboot to make sure any updates are loaded.
 3. Install git:     apt install -y git
 4. Change to the /opt directory and download these scripts:     cd /opt
-5. Download these scripts:     git clone 
+5. Download these scripts:     git clone https://github.com/k7ilo/HBLink3_Install.git
 
 
 
