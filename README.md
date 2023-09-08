@@ -3,7 +3,7 @@
 
 This is an attempt to present an alternative to the DOCKER setup installation method of HBLink3 with the PARROT (EchoTest) service
 along with a monitoring dashboard using FDMR-Monitor.  FDMR-Monitor seems to be supported more than the actual HBMonv2 distribution
-it derives from. To get your DMR Network up and running, follow the steps below.
+it derives from. To get your DMR Network up and running, follow the steps below:
 
 
 ## Prerequisites
@@ -54,7 +54,33 @@ doing so before moving on:
 ./hblink3_install.sh
 ```
 
-## Firewall Installation/Configuration (Optional but highly recommended)
+
+## Firewall (ufw) Installation & Configuration (Optional but highly recommended)
+
+The ufw-firewall_install.sh script is used to install the ufw firewall solution and open the appropriate network ports
+for HBLink3, PARROT and FDMR-Monitor to communicate properlly.  If ufw is detected, the script will bypass installation
+and configure its network ports.
+To get your firewall up and running, follow the steps below:
+
+Change into the HBLink3_Install directory if not already:
+```
+cd /opt/HBLink3_Install
+```
+Make the ufw-firwall_install.sh file executable:
+```
+chmod +x ufw-firwall_install.sh
+```
+If accessing the server HBLink3 is running on via ssh, edit ufw-firwall_install.sh
+and change the ssh port parameter under the Global Parameters section if not using the
+default of 22, otherwise there is no need to change anything:
+```
+nano /opt/HBLink3_Install/ufw-firwall_install.sh
+```
+Now run the ufw-firwall_install.sh script. When installation and/or configuration are complete, ufw will
+be enabled and all neccessary network ports will be opened. All others will be closed, protecting the server:
+```
+./ufw-firwall_install.sh
+```
  
 
 
