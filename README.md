@@ -3,7 +3,7 @@
 
 This is an attempt to present an alternative to the DOCKER setup installation method of HBLink3 with the PARROT (EchoTest) service
 along with a monitoring dashboard using FDMR-Monitor.  FDMR-Monitor seems to be supported more than the actual HBMonv2 distribution
-it derives from. To get your DMR Network up and running, follow the following steps below.
+it derives from. To get your DMR Network up and running, follow the steps below.
 
 
 ## Prerequisites
