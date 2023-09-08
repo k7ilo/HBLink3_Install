@@ -1,5 +1,13 @@
 # HBLink3_Install
-Scripts to install HBLink3 with PARROT service and the FDMR-Monitor Dashboard
+  - hblink3_install.sh =>>       Installs HBLink3 with one test talkgroup and parrot echotest service
+  - ufw-firewall_install.sh =>>  Installs the ufw firewall solution and opens basic required network ports    
+  - fdmr-mon_install.sh =>>      Installs the FDMR-Monitor dashboard for HBLink3
+
+To start the installation process ....
+
+
+
+
 
 
 
