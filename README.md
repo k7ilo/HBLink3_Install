@@ -3,7 +3,12 @@
   - ufw-firewall_install.sh =>>  Installs the ufw firewall solution and opens basic required network ports    
   - fdmr-mon_install.sh =>>      Installs the FDMR-Monitor dashboard for HBLink3
 
-To start the installation process ....
+To start the installation process, as ROOT ....
+1. Make sure your Debian 10/11 system is fully updated:     apt update && apt full-upgrade -y
+2. Reboot to make sure any updates are loaded.
+3. Install git:     apt install -y git
+4. Change to the /opt directory and download these scripts:     cd /opt
+5. Download these scripts:     git clone 
 
 
 
