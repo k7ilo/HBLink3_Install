@@ -66,20 +66,20 @@ Change into the HBLink3_Install directory if not already:
 ```
 cd /opt/HBLink3_Install
 ```
-Make the ufw-firwall_install.sh file executable:
+Make the ufw-firewall_install.sh file executable:
 ```
-chmod +x ufw-firwall_install.sh
+chmod +x ufw-firewall_install.sh
 ```
 If accessing the server HBLink3 is running on via ssh, edit ufw-firwall_install.sh
 and change the ssh port parameter under the Global Parameters section if not using the
 default of 22, otherwise there is no need to change anything:
 ```
-nano /opt/HBLink3_Install/ufw-firwall_install.sh
+nano /opt/HBLink3_Install/ufw-firewall_install.sh
 ```
-Now run the ufw-firwall_install.sh script. When installation and/or configuration are complete, ufw will
+Now run the ufw-firewall_install.sh script. When installation and/or configuration are complete, ufw will
 be enabled and all neccessary network ports will be opened. All others will be closed, protecting the server:
 ```
-./ufw-firwall_install.sh
+./ufw-firewall_install.sh
 ```
  
 
