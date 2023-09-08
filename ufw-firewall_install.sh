@@ -26,7 +26,7 @@ then
 	echo " Debian 10 (Buster) is detected "
 	sleep 2
 	clear
-	if pgrep -x ufw >/dev/null
+	if command -v ufw >/dev/null
 	then
 		echo "--------------------------------------------------------------------------"
 		echo " ufw is already installed.  The ports just need to be opened.  Moving on! "
@@ -46,7 +46,7 @@ then
 	echo " Debian 11 (Bullseye) is detected "
 	sleep 2
 	clear
-	if pgrep -x ufw >/dev/null
+	if command -v ufw >/dev/null
 	then
 		echo "--------------------------------------------------------------------------"
 		echo " ufw is already installed.  The ports just need to be opened.  Moving on! "
