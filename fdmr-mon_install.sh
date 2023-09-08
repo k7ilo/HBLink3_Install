@@ -68,6 +68,7 @@ echo "--------------------------------------------------------------------------
 echo " Now lets download and configure the FDMR-Monitor Dashboard repository .... "
 echo "----------------------------------------------------------------------------"
 sleep 2
+cd $INSDIR
 git clone $HBMONREPO
 cd $HBMONDIR
 if [ -e monitor.py ]
