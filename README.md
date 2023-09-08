@@ -72,7 +72,9 @@ chmod +x ufw-firewall_install.sh
 ```
 If accessing the server HBLink3 is running on via ssh, edit ufw-firwall_install.sh
 and change the ssh port parameter under the Global Parameters section if not using the
-default of 22, otherwise there is no need to change anything:
+default of 22, otherwise there is no need to change anything. If you change your ssh port
+number later, you can either run this script after it has been changed in the file or 
+manually change:
 ```
 nano /opt/HBLink3_Install/ufw-firewall_install.sh
 ```
