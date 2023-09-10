@@ -131,14 +131,13 @@ echo " OOPS! I don't see the web files. Please check your configuration and try 
 echo "----------------------------------------------------------------------------------------------"
 exit 0
 fi
-cp utils/lastheard /etc/cron.daily/
-chmod +x /etc/cron.daily/lastheard
-cp utils/hbmon.service /lib/systemd/system/
 
 echo ""
-echo "---------------------------------------------------------------"
+echo "--------------------------------------------------------"
 echo " Creating, enabling and starting the hbmon service .... "
-echo "---------------------------------------------------------------"
+echo "--------------------------------------------------------"
+cp utils/lastheard /etc/cron.daily/
+chmod +x /etc/cron.daily/lastheard
 cp $HBMONDIR/utils/hbmon.service /lib/systemd/system/
 systemctl enable hbmon
 systemctl start hbmon
