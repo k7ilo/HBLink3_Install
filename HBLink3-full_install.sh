@@ -20,12 +20,12 @@ fi
 VERSION=$(sed 's/\..*//' /etc/debian_version)
 INSDIR=/opt
 HBLINKDIR=$INSDIR/hblink3
-HBMONDIR=$INSDIR/FDMR-Monitor
+HBMONDIR=$INSDIR/HBMonv2
 DEP="git curl python3 python3-dev python3-pip sed libffi-dev libssl-dev apache2 php ca-certificates"
 sshport=22
 
 HBLINKREPO=https://github.com/HBLink-org/hblink3.git
-HBMONREPO=https://github.com/yuvelq/FDMR-Monitor.git
+HBMONREPO=https://github.com/sp2ong/HBMonv2.git
 
 # Lets begin --------------------------------------------------------------------------------------------------------
 if [ $VERSION = 10 ];
