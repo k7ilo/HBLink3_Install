@@ -429,12 +429,12 @@ echo "--------------------------------------------------------------------"
 sleep 2
 
 
-# FDMR-Monitor Installation -----------------------------------------------------------------------------------------
+# HBMonv2 Installation -----------------------------------------------------------------------------------------
 clear
 echo ""
-echo "----------------------------------------------------------------------------"
-echo " Now lets download and configure the FDMR-Monitor Dashboard repository .... "
-echo "----------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------"
+echo " Now lets download and configure the HBMonv2 Dashboard repository .... "
+echo "-----------------------------------------------------------------------"
 sleep 2
 cd $INSDIR
 git clone $HBMONREPO
@@ -442,26 +442,25 @@ cd $HBMONDIR
 if [ -e monitor.py ]
 then
 echo ""
-echo "--------------------------------------------------------------------"
-echo " I can see we are in the FDMR-Monitor director. Let's continue .... "
-echo "--------------------------------------------------------------------"
+echo "---------------------------------------------------------------"
+echo " I can see we are in the HBMonv2 director. Let's continue .... "
+echo "---------------------------------------------------------------"
 else
-echo "------------------------------------------------------------------------------------------------ "
-echo " It doesn't seem like you're in the FDMR-Monitor directory. Please see if you are.  Exiting .... "
-echo "------------------------------------------------------------------------------------------------ "
+echo "------------------------------------------------------------------------------------------- "
+echo " It doesn't seem like you're in the HBMonv2 directory. Please see if you are.  Exiting .... "
+echo "------------------------------------------------------------------------------------------- "
 exit 0
 fi
 
-echo "-----------------------------------------------------------------------------"
-echo " Downloading and installing dependencies from the requirements.txt file .... "
-echo "-----------------------------------------------------------------------------"
-pip3 install -r requirements.txt
+echo "-----------------------------------------------------------"
+echo " Downloading and installing other needed dependencies .... "
+echo "-----------------------------------------------------------"
+pip3 install setuptools wheel Twisted dmr_utils3 bitstring autobahn jinja2==2.11.3 markupsafe==2.0.1
 sleep 2
 echo "--------------------------------------"
 echo " Creating the configuratoin file .... "
 echo "--------------------------------------"
-cp fdmr-mon_SAMPLE.cfg fdmr-mon.cfg
-chmod 644 fdmr-mon.cfg
+cp config_SAMPLE.py config.py
 sleep 2
 
 echo ""
@@ -482,9 +481,9 @@ echo "-------------------------------------------------------------------"
 fi
 
 echo ""
-echo "------------------------------------------------------"
-echo " Installing the FDMR-Monitor Dashboard web files .... "
-echo "------------------------------------------------------"
+echo "-------------------------------------------------"
+echo " Installing the HBMonv2 Dashboard web files .... "
+echo "-------------------------------------------------"
 cp -a $HBMONDIR/html/. /var/www/html/
 if [ -e info.php ]
 then
@@ -501,17 +500,20 @@ exit 0
 fi
 
 echo ""
-echo "---------------------------------------------------------------"
-echo " Creating, enabling and starting the FDMR-Monitor service .... "
-echo "---------------------------------------------------------------"
-cp $HBMONDIR/utils/systemd/fdmr_mon.service /lib/systemd/system/
-systemctl enable fdmr_mon
-systemctl start fdmr_mon
+echo "--------------------------------------------------------"
+echo " Creating, enabling and starting the hbmon service .... "
+echo "--------------------------------------------------------"
+cp utils/lastheard /etc/cron.daily/
+chmod +x /etc/cron.daily/lastheard
+cp $HBMONDIR/utils/hbmon.service /lib/systemd/system/
+systemctl enable hbmon
+systemctl start hbmon
 echo " Done .... "
+sleep 2
 
-echo "-------------------------------------------------------------------"
-echo " FDMR-Monitor installation is complete.  One more thing to do .... "
-echo "-------------------------------------------------------------------"
+echo "------------------------------------------------------------------"
+echo " The HBMonv2 installation is complete.  One more thing to do .... "
+echo "------------------------------------------------------------------"
 sleep 2
 
 
