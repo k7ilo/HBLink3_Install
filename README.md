@@ -83,23 +83,23 @@ be enabled and all neccessary network ports will be opened. All others will be c
 ./ufw-firewall_install.sh
 ```
 
-## HBMonv2 Installation
+## HBmonv2 Installation
 
-HBMonv2_install.sh is used to install the HBMonv2 Dashboard by SP2ONG.  It will first build you a webserver
+HBmonv2_install.sh is used to install the HBmonv2 Dashboard by SP2ONG.  It will first build you a webserver
 with php support and then install the dashboard. In order to do so, follow the steps below:
 
 Change into the HBLink3_Install directory if not already:
 ```
 cd /opt/HBLink3_Install
 ```
-Make the HBMonv2_install.sh file executable:
+Make the HBmonv2_install.sh file executable:
 ```
-chmod +x HBMonv2_install.sh
+chmod +x HBmonv2_install.sh
 ```
-Now run the HBMonv2_install.sh script.  When installation is completed,
-you will be presented with instructions on how to test HBMonv2:
+Now run the HBmonv2_install.sh script.  When installation is completed,
+you will be presented with instructions on how to test HBmonv2:
 ```
-./HBMonv2_install.sh
+./HBmonv2_install.sh
 ```
 
 
