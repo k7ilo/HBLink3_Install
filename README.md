@@ -10,7 +10,7 @@ it derives from. To get your DMR Network up and running, follow the steps below:
 First, this has been tested on Debian 10 and 11, 64 bit distributions only and it is assumed that you are doing the same along with using
 the ufw firewall solution. If this works on other versions of Debian, and you have an iptables firewall setup, please let me know at k7ilo@outlook.com
 
-* Temporarily disable your linux firewall (if installed and being used) for testing only (ufw in this case):
+* Temporarily disable your linux firewall (if installed and being used) for testing only (ufw in my case):
   ```sh
   ufw disable
   ```
