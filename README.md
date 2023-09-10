@@ -18,7 +18,7 @@ the ufw firewall solution. If this works on other versions of Debian, and you ha
   ```sh
   apt update && apt full-upgrade -y
   ```
-* Reboot to make sure updates are loaded:
+* Reboot to make sure updates are loaded if any were installed:
   ```sh
   reboot
   ```
