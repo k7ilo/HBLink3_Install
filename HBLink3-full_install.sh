@@ -503,7 +503,7 @@ echo ""
 echo "--------------------------------------------------------"
 echo " Creating, enabling and starting the hbmon service .... "
 echo "--------------------------------------------------------"
-cp utils/lastheard /etc/cron.daily/
+cp $HBMONDIR/utils/lastheard /etc/cron.daily/
 chmod +x /etc/cron.daily/lastheard
 cp $HBMONDIR/utils/hbmon.service /lib/systemd/system/
 systemctl enable hbmon
