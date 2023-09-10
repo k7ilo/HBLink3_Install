@@ -83,23 +83,23 @@ be enabled and all neccessary network ports will be opened. All others will be c
 ./ufw-firewall_install.sh
 ```
 
-## FDMR-Monitor Installation
+## HBMonv2 Installation
 
-fdmr-mon_install.sh is used to install the FDMR-Monitor Dashboard by OA4DOA.  It will first build you a webserver
+HBMonv2_install.sh is used to install the HBMonv2 Dashboard by SP2ONG.  It will first build you a webserver
 with php support and then install the dashboard. In order to do so, follow the steps below:
 
 Change into the HBLink3_Install directory if not already:
 ```
 cd /opt/HBLink3_Install
 ```
-Make the fdmr-mon_install.sh file executable:
+Make the HBMonv2_install.sh file executable:
 ```
-chmod +x fdmr-mon_install.sh
+chmod +x HBMonv2_install.sh
 ```
-Now run the fdmr-mon_install.sh script.  When installation is completed,
-you will be presented with instructions on how to test FDMR-Monitor:
+Now run the HBMonv2_install.sh script.  When installation is completed,
+you will be presented with instructions on how to test HBMonv2:
 ```
-./fdmr-mon_install.sh
+./HBMonv2_install.sh
 ```
 
 
