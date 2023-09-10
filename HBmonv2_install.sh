@@ -19,7 +19,7 @@ fi
 VERSION=$(sed 's/\..*//' /etc/debian_version)
 INSDIR=/opt
 HBMONDIR=$INSDIR/HBMonv2
-HBMONREPO=https://github.com/sp2ong/HBMonv2.git
+HBMONREPO=https://github.com/k7ilo/HBMonv2.git
 DEP="curl python3 python3-dev python3-pip libffi-dev libssl-dev sed apache2 php ca-certificates"
 
 if [ $VERSION = 10 ];
