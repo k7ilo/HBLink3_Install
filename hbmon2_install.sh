@@ -64,9 +64,9 @@ exit 0
 fi
 
 echo ""
-echo "----------------------------------------------------------------------------"
-echo " Now lets download and configure the FDMR-Monitor Dashboard repository .... "
-echo "----------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------"
+echo " Now lets download and configure the HBMonv2 Dashboard repository .... "
+echo "-----------------------------------------------------------------------"
 sleep 2
 cd $INSDIR
 git clone $HBMONREPO
@@ -74,19 +74,19 @@ cd $HBMONDIR
 if [ -e monitor.py ]
 then
 echo ""
-echo "--------------------------------------------------------------------"
-echo " I can see we are in the FDMR-Monitor director. Let's continue .... "
-echo "--------------------------------------------------------------------"
+echo "---------------------------------------------------------------"
+echo " I can see we are in the HBMonv2 director. Let's continue .... "
+echo "---------------------------------------------------------------"
 else
-echo "------------------------------------------------------------------------------------------------ "
-echo " It doesn't seem like you're in the FDMR-Monitor directory. Please see if you are.  Exiting .... "
-echo "------------------------------------------------------------------------------------------------ "
+echo "------------------------------------------------------------------------------------------- "
+echo " It doesn't seem like you're in the HBMonv2 directory. Please see if you are.  Exiting .... "
+echo "------------------------------------------------------------------------------------------- "
 exit 0
 fi
 
-echo "-----------------------------------------------------------------------------"
-echo " Downloading and installing dependencies from the requirements.txt file .... "
-echo "-----------------------------------------------------------------------------"
+echo "-----------------------------------------------------------"
+echo " Downloading and installing other needed dependencies .... "
+echo "-----------------------------------------------------------"
 pip3 install setuptools wheel Twisted dmr_utils3 bitstring autobahn jinja2==2.11.3 markupsafe==2.0.1
 sleep 2
 echo "--------------------------------------"
@@ -114,9 +114,9 @@ echo "-------------------------------------------------------------------"
 fi
 
 echo ""
-echo "------------------------------------------------------"
-echo " Installing the FDMR-Monitor Dashboard web files .... "
-echo "------------------------------------------------------"
+echo "-------------------------------------------------"
+echo " Installing the HBMonv2 Dashboard web files .... "
+echo "-------------------------------------------------"
 cp -a $HBMONDIR/html/. /var/www/html/
 if [ -e info.php ]
 then
@@ -146,11 +146,11 @@ echo " Done .... "
 sleep 2
 
 clear
-echo " So now it looks like we're done with installing FDMR-Monitor "
-echo " Check and see if it's running by typing: systemctl status fdmr_mon "
-echo " Access the Dashboard with your favorite browserby going to the "
+echo " So now it looks like we're done with installing HBMonv2 "
+echo " Check and see if it's running by typing: systemctl status hbmon "
+echo " Access the Dashboard with your favorite browser by going to the "
 echo " Dashboards URL at http://<server_address> "
 echo ""
-echo " Click on Linked Systems.  If everything went well, you should see the PARROT server "
-echo " under the Peers status section "
+echo " The PARROT server should show under the Connected to Server section on " 
+echo " the Home page if everything went well and should also show on the Peers page. "
 echo " Have fun and 73 "
