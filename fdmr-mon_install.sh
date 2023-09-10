@@ -93,7 +93,7 @@ echo "--------------------------------------"
 echo " Creating the configuratoin file .... "
 echo "--------------------------------------"
 cp fdmr-mon_SAMPLE.cfg fdmr-mon.cfg
-chmod 644 fdmr-mon.cfg
+#chmod 644 fdmr-mon.cfg
 sleep 2
 
 echo ""
