@@ -25,7 +25,7 @@ DEP="git curl python3 python3-dev python3-pip sed libffi-dev libssl-dev apache2 
 sshport=22
 
 HBLINKREPO=https://github.com/HBLink-org/hblink3.git
-HBMONREPO=https://github.com/sp2ong/HBMonv2.git
+HBMONREPO=https://github.com/k7ilo/HBMonv2.git
 
 # Lets begin --------------------------------------------------------------------------------------------------------
 if [ $VERSION = 10 ];
