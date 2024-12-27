@@ -42,15 +42,15 @@ Change into the HBLink3_Install directory:
 ```
 cd /opt/HBLink3_Install
 ```
-Make the Hblink3_install.sh file executable::
+Make the HBlink3_install.sh file executable::
 ```
-chmod +x Hblink3_install.sh
+chmod +x HBlink3_install.sh
 ```
 Now run the hblink3_install.sh script.  When installation is completed,
 you will be presented with instructions on testing HBlink3.  I suggest
 doing so before moving on:
 ```
-./Hblink3_install.sh
+./HBlink3_install.sh
 ```
 
 
